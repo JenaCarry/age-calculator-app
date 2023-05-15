@@ -98,7 +98,7 @@ function setSuccessFor(input) {
 
 function leapYear(currentYear) {
   if (
-    (currentYear % 4 === 0 && currentYear % 100 !== 0) ||
+    currentYear % 4 === 0 && currentYear % 100 !== 0 ||
     currentYear % 400 === 0
   ) {
     return true;
