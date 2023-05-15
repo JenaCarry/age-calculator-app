@@ -63,7 +63,9 @@ function isValidDay(input, month, bool) {
   ) {
     setErrorFor(input, "Must be a valid day");
   }
-  if (dayNumber === 29 && monthNumber === 2 && bool === false) {
+  if (dayNumber > 29 && monthNumber === 2) {
+    setErrorFor(input, "Must be a valid day");
+  } else if (dayNumber === 29 && monthNumber === 2 && bool === false) {
     setErrorFor(input, "Must be a valid day");
   }
 }
