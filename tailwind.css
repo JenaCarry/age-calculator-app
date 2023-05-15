@@ -1,0 +1,76 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Italic.ttf");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-BoldItalic.ttf");
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-ExtraBold.ttf");
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-ExtraBoldItalic.ttf");
+    font-weight: 800;
+    font-style: italic;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .label {
+        @apply text-sm text-smoke-grey font-bold grid gap-2.5
+    }
+
+    .invalid .label {
+        @apply text-Light-red
+    }
+
+    .input-box {
+        @apply border border-light-grey focus:outline-purple rounded-md w-full h-14 font-bold text-off-black pl-3 text-lg sm:text-xl placeholder:text-smoke-grey cursor-pointer
+    }
+
+    .invalid .input-box {
+        @apply border-Light-red
+    }
+    
+    .error {
+        @apply text-xs mt-2 text-Light-red italic hidden
+    }
+    
+    .invalid .error {
+        @apply block
+    }
+
+    .result {
+        @apply text-off-black text-4xl font-extrabold sm:text-5xl
+    }
+}
+
+::-webkit-outer-spin-button,
+::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
