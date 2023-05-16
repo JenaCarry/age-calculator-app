@@ -8,7 +8,6 @@ window.addEventListener("load", () => {
   const resultMonth = document.querySelector(".result-month");
   const resultYear = document.querySelector(".result-year");
 
-  const currentDay = new Date().getDate();
   const currentYear = new Date().getFullYear();
 
   btn.addEventListener("click", (e) => {
@@ -21,6 +20,10 @@ window.addEventListener("load", () => {
       if (e.key === "Enter") {
         btn.click();
       }
+    });
+
+    element.addEventListener("focus", () => {
+      element.value = "";
     });
   });
 
@@ -100,7 +103,7 @@ function setSuccessFor(input) {
 
 function leapYear(currentYear) {
   if (
-    currentYear % 4 === 0 && currentYear % 100 !== 0 ||
+    (currentYear % 4 === 0 && currentYear % 100 !== 0) ||
     currentYear % 400 === 0
   ) {
     return true;
