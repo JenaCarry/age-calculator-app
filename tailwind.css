@@ -49,11 +49,11 @@
     }
 
     .input-box {
-        @apply border border-light-grey focus:outline-purple rounded-md w-full h-14 font-bold text-off-black pl-3 text-lg sm:text-xl placeholder:text-smoke-grey cursor-pointer
+        @apply border border-light-grey focus:outline-none focus:ring-2 ring-purple transition duration-200 ease-in-out rounded-md w-full h-14 font-bold text-off-black pl-3 text-lg sm:text-xl placeholder:text-smoke-grey cursor-pointer
     }
-
+      
     .invalid .input-box {
-        @apply border-Light-red
+        @apply border-Light-red focus:ring-0
     }
     
     .error {
